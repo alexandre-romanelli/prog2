@@ -1,0 +1,39 @@
+Atividades de aula (2026-10-28)
+
+As atividades a seguir são voltadas para a fixação das técnicas para programação de GUI em Python com CustomTkInter. Em todas as atividades é assumida a premissa de que os alunos têm conhecimento básico de CustomTkInter (montagem de um layout com os objetos necessários), e é assumido que se trata de programar interface gráfica com CustomTkInter.
+
+Atividade 1)
+    Programar uma GUI com os seguintes campos:
+      ~ Nome         (entry)
+      ~ Sobrenome    (entry)
+      ~ E-mail       (entry)
+      ~ Botão Salvar (button)
+
+Atividade 2)
+    Alterar o código da Atividade 1 para que, quando o botão Salvar for clicado, seja exibida uma janela de mensagem com os dados digitados nos campos entry.
+
+Atividade 3)
+    Fazer um programa para cadastro de espécie que exibe um formulário com os seguintes campos:
+      ~ Espécie
+      ~ Gênero
+      ~ Família
+      ~ Ordem
+      ~ Classe
+      ~ Filo
+      ~ Reino
+      ~ Botão Salvar
+
+Atividade 4)
+    Alterar o código da Atividade 4 para que, ao ser clicado o botão Salvar, seja exibida uma janela de mensagem com os dados digitados nos campos de texto da GUI.
+
+Atividade 5)
+    Implementar um programa para cadastro de automóvel, com duas classes de janelas, ambas com os mesmos campos de entrada de dados, mas a principal com um botão Abrir Formulário e a outra com um botão Salvar. Os campos de entrada devem ser para informar:
+      ~ Nome
+      ~ Fabricante
+      ~ Ano de fabricação
+      ~ Capacidade cúbica
+      ~ Tipo de combustível
+    Ao clicar no botão Abrir Formulário, deve ser exibida a janela de cadastro. Ao clicar no botão Salvar desta, os dados devem ser exibidos na janela principal e a janela de cadastro deve ser destruída.
+
+Atividade 6)
+    Tema livre, com pelo menos duas janelas e com transição de uma janela para a outra e vice-versa.
