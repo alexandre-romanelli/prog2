@@ -23,17 +23,34 @@ class Principal(ctk.CTk):
         self.entry_capacidade_cubica.pack(pady=5)
         self.entry_tipo_combustivel = ctk.CTkEntry(self, placeholder_text="Tipo de combustível")
         self.entry_tipo_combustivel.pack(pady=5)
+        self.desabilitar_campos()  # Desabilita os campos de entrada inicialmente
 
     def abrir_formulario(self):
         form = FormCadastro(master=self)
         form.grab_set()  # Impede interação com a janela principal enquanto o formulário estiver aberto
 
     def inserir(self, nome, fabricante, ano_fabricacao, capacidade_cubica, tipo_combustivel):
+        self.habilitar_campos()
         self.entry_nome.set(nome)
         self.entry_fabricante.set(fabricante)
         self.entry_ano_fabricacao.set(ano_fabricacao)
         self.entry_capacidade_cubica.set(capacidade_cubica)
         self.entry_tipo_combustivel.set(tipo_combustivel)
+        self.desabilitar_campos()
+
+    def habilitar_campos(self):
+        self.entry_nome.configure(state='normal')
+        self.entry_fabricante.configure(state='normal')
+        self.entry_ano_fabricacao.configure(state='normal')
+        self.entry_capacidade_cubica.configure(state='normal')
+        self.entry_tipo_combustivel.configure(state='normal')
+
+    def desabilitar_campos(self):
+        self.entry_nome.configure(state='disabled')
+        self.entry_fabricante.configure(state='disabled')
+        self.entry_ano_fabricacao.configure(state='disabled')
+        self.entry_capacidade_cubica.configure(state='disabled')
+        self.entry_tipo_combustivel.configure(state='disabled')
 
 class FormCadastro(ctk.CTkToplevel):
     def __init__(self, master=Principal, **kwargs):
@@ -46,7 +63,7 @@ class FormCadastro(ctk.CTkToplevel):
 
     def build_gui(self):
         ctk.CTkLabel(self, text="Nome", width=100, padx=6, pady=6, anchor="e").grid(row=0, column=0)
-        self.entry_nome = ctk.CTkEntry(self, placeholder_text="Digite o nome do carro", )
+        self.entry_nome = ctk.CTkEntry(self, placeholder_text="Digite o nome do carro")
         self.entry_nome.grid(row=0, column=1, sticky='ew', padx=6, pady=6)
 
         ctk.CTkLabel(self, text="Fabricante", width=100, padx=6, pady=6, anchor="e").grid(row=1, column=0)
