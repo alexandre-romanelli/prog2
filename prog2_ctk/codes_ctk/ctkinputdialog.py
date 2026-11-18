@@ -12,7 +12,9 @@ class Exemplo_CTkInputDialog(ctk.CTk):
 
   def mostrar(self):
     valor = ctk.CTkInputDialog(text='Digite um valor:').get_input()
-    if valor is not None and valor != '':
+    if valor is None:
+      messagebox.showinfo(title='Input', message='Input cancelado.')
+    elif valor != '':
       messagebox.showinfo(title='Input', message=f'Valor digitado: {valor}')
     else:
       messagebox.showinfo(title='Input', message='Nenhum valor digitado.')

@@ -7,6 +7,9 @@ class JanelaSecundaria(ctk.CTkToplevel):
     self.geometry('300x200')
     label = ctk.CTkLabel(master=self, text="Esta é uma janela Toplevel.")
     label.grid(row=0, column=0, pady=20, padx=20)
+    botao = ctk.CTkButton(master=self, text="Fechar",
+                          command=self.destroy)
+    botao.grid(row=1, column=0)
     self.grab_set()
 
 class Exemplo_CTkToplevel(ctk.CTk):
@@ -20,7 +23,7 @@ class Exemplo_CTkToplevel(ctk.CTk):
     botao.grid(row=0, column=0, pady=20, padx=20)
 
   def abrir_toplevel(self):
-    toplevel = JanelaSecundaria(master=self)
+    JanelaSecundaria(master=self)
 
 if __name__ == '__main__':
   app = Exemplo_CTkToplevel()

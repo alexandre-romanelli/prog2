@@ -8,8 +8,7 @@ class Exemplo_CTkRadioButton(ctk.CTk):
     self.geometry('400x300')
     self.int_var = ctk.IntVar(value=1)
     ctk.CTkRadioButton(
-      master=self, text='Opcao 1', variable=self.int_var, value=1) \
-      .grid(row=0, column=0, pady=10, padx=10, sticky="w")
+      master=self, text='Opcao 1', variable=self.int_var, value=1).grid(row=0, column=0, pady=10, padx=10, sticky="w")
     ctk.CTkRadioButton(
       master=self, text='Opcao 2', variable=self.int_var, value=2) \
       .grid(row=0, column=1, pady=10, padx=10, sticky="w")

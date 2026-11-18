@@ -11,7 +11,7 @@ class Exemplo_CTkComboBox(ctk.CTk):
         self.combobox.grid(row=0, column=0, pady=10, padx=10)
         ctk.CTkButton(self, text='Exibir valor', 
                       command=lambda: self.mostrar(self.combobox.get())) \
-                        .grid(row=1, column=0, pady=10, padx=10)
+                        .grid(row=0, column=1, pady=10, padx=10)
 
     def mostrar(self, valor_selecao):
         messagebox.showinfo(title='Selecao', message=f'Selecionada: {valor_selecao}')

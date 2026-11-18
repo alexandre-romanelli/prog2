@@ -10,8 +10,8 @@ class TelaPrincipal(ctk.CTk):
     entry_email = None
     button_salvar = None
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self):
+        super().__init__()
         self.title('Cadastro de usuário')
         self.geometry('450x170')
         self.resizable(True, False)

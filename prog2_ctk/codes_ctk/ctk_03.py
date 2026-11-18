@@ -12,5 +12,3 @@ class Exemplo_CTk(ctk.CTk):
 if __name__ == '__main__':
     app = Exemplo_CTk()
     app.mainloop()
-
-    
