@@ -64,8 +64,12 @@ class TelaTabelaRaca(ctk.CTkToplevel):
     TelaRegistroRaca(self, especie, raca, "alterar")
 
   def excluir(self):
-    itemAtual = self.tree.focus()
-    self.tree.delete(itemAtual)
+    opcao = tk.messagebox.askquestion(title="Confirmação", 
+                                      message="Confirma exclusão?", 
+                                      type=tk.messagebox.YESNO)
+    if opcao == tk.messagebox.YES:
+      itemAtual = self.tree.focus()
+      self.tree.delete(itemAtual)
 
   def salvarNovo(self, especie: str, raca: str):
     self.tree.insert("", "end", values=(str(especie), str(raca)))
