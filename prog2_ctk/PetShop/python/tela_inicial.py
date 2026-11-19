@@ -10,10 +10,9 @@ class TelaInicial(ctk.CTk):
                   text="Cadastro de raças", 
                   command=self.abrir_cadastro_raca).grid(row=0, column=0, 
                                                          padx=10, pady=10)
-    self.grab_set()
 
   def abrir_cadastro_raca(self):
-    TelaTabelaRaca()
+    TelaTabelaRaca(self)
 
 if __name__ == "__main__":
   app = TelaInicial()

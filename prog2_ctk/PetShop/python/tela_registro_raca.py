@@ -7,7 +7,7 @@ class TelaRegistroRaca(ctk.CTkToplevel):
     super().__init__()
     self.master = master
     self.opcao = opcao
-    self.title = "Registro de raça"
+    self.title("Registro de raça")
     self.geometry("300x150")
 
     labelEspecie = ctk.CTkLabel(master=self, text="Espécie")
@@ -28,7 +28,7 @@ class TelaRegistroRaca(ctk.CTkToplevel):
     self.entryNomeRaca.grid(row=1, column=1, sticky="w")
 
     frame = ctk.CTkFrame(master=self, height=40)
-    frame.grid(row=2, column=0, columnspan=2, padx=10, pady=5, sticky="ew")
+    frame.grid(row=2, column=0, columnspan=2, padx=0, pady=5, sticky="ew")
     
     buttonSalvar = ctk.CTkButton(master=frame, text="Salvar", command=self.salvar, width=80)
     buttonSalvar.grid(row=0, column=0, padx=10, pady=5, sticky="w")

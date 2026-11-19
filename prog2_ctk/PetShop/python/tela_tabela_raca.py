@@ -4,7 +4,7 @@ from tkinter import ttk
 from tela_registro_raca import TelaRegistroRaca
 
 class TelaTabelaRaca(ctk.CTkToplevel):
-  def __init__(self):
+  def __init__(self, master):
     super().__init__()
     self.title("Tabela de raças")
     self.geometry("355x340")
@@ -51,7 +51,7 @@ class TelaTabelaRaca(ctk.CTkToplevel):
     self.tree.insert("", "end", values=("Gato", "Persa"))
 
     self.tree.grid(row=1, column=0, padx=5, pady=5)
-    self.grab_set()
+    self.transient(master)
 
   def novo_registro(self):
     TelaRegistroRaca(self, None, "", "novo")
